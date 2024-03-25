@@ -3,7 +3,6 @@ repos:
     hooks:
       - id: groovy-lint
         name: Groovy Lint
-        entry: sh -c 'docker build .'
+        entry: docker run --rm -v $(pwd):/data nvuillam/npm-groovy-lint groovy-lint /data --fix
         language: system
         stages: [commit]
-
