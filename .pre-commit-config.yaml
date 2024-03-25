@@ -3,7 +3,6 @@ repos:
     hooks:
       - id: groovy-lint
         name: Groovy Lint
-        entry: npm-groovy-lint
-        language: docker
-        files: \.groovy$
+        language: docker_image
+        entry: nvuillam/npm-groovy-lint:latest npm-groovy-lint
         stages: [commit]
